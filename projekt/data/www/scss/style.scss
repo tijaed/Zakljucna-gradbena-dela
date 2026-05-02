@@ -1,0 +1,276 @@
+/* GLOBALNI GUMB - NOVAK STANDARD (222x58) */
+.btn-novak {
+    background-color: #000000;
+    color: #ffffff;
+    width: 222px;
+    height: 58px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
+    &:hover {
+        background-color: #222;
+        transform: scale(1.02);
+        color: #fff;
+    }
+}
+
+/* GLOBALNA NAVIGACIJA - FIX */
+.navbar-novak {
+    background-color: #ffffff;
+    padding: 15px 0;
+    min-height: 100px; // Da ima navigacija dovolj višine
+    display: flex;
+    align-items: center;
+
+    .navbar-brand img {
+        height: 70px; // Povečamo logotip, da bo opazen
+        width: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center; // Vertikalno poravna tekst in gumb
+    }
+
+    .nav-link {
+        color: #000000 !important;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0 20px; // Razmik med povezavami
+        padding: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #bfa37e !important;
+        }
+    }
+
+    /* GUMB V NAVIGACIJI */
+    .btn-black {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        padding: 12px 25px !important;
+        border-radius: 10px !important;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 20px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #333333 !important;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+/* GLOBALNI FOOTER */
+.main-footer {
+    background-color: #ffffff;
+    padding: 80px 0 40px 0;
+    border-top: 1px solid #eee;
+
+    .footer-logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        color: #000;
+    }
+
+    p, a {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.8;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+        
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            /* Če želiš barvne ikone, izbriši spodnjo vrstico filter */
+            filter: grayscale(100%); 
+            transition: 0.3s;
+            &:hover {
+                filter: grayscale(0%);
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .copyright-text {
+        margin-top: 60px;
+        font-size: 13px;
+        color: #999;
+        text-align: center;
+    }
+}
+
+
+
+// 1. Tvoje spremenljivke
+$primary: #A68868; 
+
+// 2. Uvoz Bootstrapa iz node_modules
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+/* HERO SEKCIJA - POPOLNA CENTRIRANOST */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 685px; // Višina iz tvoje Figme
+    overflow: hidden;
+
+    .hero-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(0.5); // Zatemnitev, da bela pisava "izskoči"
+    }
+
+    .hero-overlay-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto; // Centriranje celotnega bloka
+    }
+
+    .hero-title {
+        font-size: 64px;
+        font-weight: 700;
+        color: #ffffff; // Bela barva naslova
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9); // Bela barva opisa
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+}
+
+/* TESTIMONIALS SEKCIJA - ESTETSKA PRILAGODITEV */
+.testimonials-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+
+    .testimonial-card {
+        background-color: #e0ddd8;
+        width: 100%;
+        max-width: 368px;
+        
+        // ODSTRANIMO FIKSNO VIŠINO (height: 703px)
+        // UPORABIMO DINAMIČNO VIŠINO:
+        height: 100%; 
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-align: center;
+        margin: 0 auto;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .profile-img-container {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 25px;
+            flex-shrink: 0;
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .client-name {
+            font-size: 19px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 20px;
+            min-height: 50px; // Rezervira prostor za dve vrstici imena
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+}
+
+
+
+
+/* PORTFOLIO SEKCIJA */
+.portfolio-section {
+    background-color: #e0ddd8; // Enaka bež barva kot pri strankah za konsistenco
+    padding: 100px 0;
+
+    .section-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 60px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 368px;
+        height: 446px; // Točna višina iz Figme
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 30px; // Bolj poudarjeni zaobljeni robovi kot pri karticah
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02); // Nežen zoom efekt
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Poskrbi, da slika zapolni celoten prostor brez popačenja
+        }
+    }
+}
+
+
