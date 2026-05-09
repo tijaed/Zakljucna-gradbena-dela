@@ -403,4 +403,173 @@ $primary: #A68868;
         line-height: 1.6;
         margin-top: 40px;
     }
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.logo {
+  height: 55px;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #000;
+  position: relative;
+}
+
+.nav-link.active {
+  color: #a8835b;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #a8835b;
+}
+
+/* NASLOV */
+.hero-title {
+  font-size: 64px;
+  margin: 80px 0;
+}
+
+/* KARTICE */
+.contact-card {
+  border-radius: 28px;
+  padding: 30px;
+  height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* IKONA (zgoraj) */
+.contact-card .icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* NASLOV – vedno na isti poziciji */
+.contact-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+
+  margin: 0;
+
+  height: 50px;              // 🔥 fiksna višina
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEKST spodaj */
+.contact-card p {
+  font-size: 18px;
+  margin-top: auto;          // 🔥 potisne tekst na dno
+}
+
+/* BARVE */
+.card-phone { background: #a8835b; }
+.card-address { background: #a79a87; }
+.card-email { background: #c2b39c; }
+
+/* FORMA */
+.form-box {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+
+  label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+  }
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.btn-submit {
+  background: #8e8a83;
+  color: white;
+  border-radius: 8px;
+}
+
+/* MAPA */
+.map-box {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+} 
+
+
+/* FOOTER */
+.footer {
+  background: #ffffff; // kot na sliki
+  padding-top: 30px;
+}
+
+.footer-line {
+  border-top: 1px solid #ccc;
+  margin-top: 60px;
+}
+
+/* GRID namesto bootstrap row */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LOGO */
+.footer-logo {
+  max-width: 180px;
+}
+
+/* NASLOVI */
+.footer-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* TEKST */
+.footer-text {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* IKONE */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+
+  i {
+    font-size: 18px;
+    color: #333;
+  }
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  font-size: 13px;
+  padding: 20px 0;
+  color: #666;
 }
