@@ -24,3 +24,4 @@ $primary: #A68868;
     padding: 0.75rem 1.5rem;
   }
 }
+@import "../node_modules/bootstrap/scss/bootstrap"; 
