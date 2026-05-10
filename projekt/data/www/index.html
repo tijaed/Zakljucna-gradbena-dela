@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Prva Spletna Stran</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  <div id="nav-placeholder"> </div>
+
+
+
+
+<section class="hero-section">
+    <img src="slike/hero_ozadje.jpg" alt="Ozadje Novak" class="hero-bg-img">
+
+    <div class="container h-100">
+        <div class="hero-overlay-content d-flex flex-column justify-content-center align-items-center h-100 text-center">
+            <h1 class="hero-title">Od grobih del do<br>sanjskega doma</h1>
+            <p class="hero-text">
+                Vaša hiša postane dom šele takrat, ko so stene ravne, podi brezhibni in detajli dovršeni. 
+                Prepustite finalno fazo gradnje strokovnjakom, ki ne iščejo bližnjic.
+            </p>
+            <a href="#" class="btn-novak">Rezerviraj termin</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="testimonials-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Kaj pravijo naše stranke</h2>
+        
+        <div class="row g-4 justify-content-center mb-5">
+            <!-- Stranka 1 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="profile-img-container">
+                        <img src="slike/oseba1.png" alt="Andrej K." class="profile-img">
+                    </div>
+                    <h5 class="client-name">Andrej K., lastnik novogradnje</h5>
+                    <p class="testimonial-text">
+                        "Pri gradnji hiše sem imel največ težav z usklajevanjem mojstrov, dokler nisem najel te ekipe za vsa zaključna dela. Od suhomontaže do končnega pleskanja je vse teklo kot po maslu. Posebej bi pohvalil njihovo natančnost pri kitanju sten – pod reflektorji se ne vidi niti ena napaka!"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stranka 2 -->
+            <div class="col-md-4">
+                <div class="testimonial-card shadow-sm">
+                    <div class="profile-img-container">
+                        <img src="slike/oseba3.png" alt="Gregor Z." class="profile-img">
+                    </div>
+                    <h5 class="client-name">Gregor Z., lastnik poslovnih prostorov</h5>
+                    <p class="testimonial-text">
+                        "V poslu štejejo roki in ta ekipa se jih drži 100-odstotno. Potreboval sem hitro izdelavo predelnih sten in pleskanje pisarn pred vselitvijo. Delali so učinkovito, čisto in brez nepotrebnega kompliciranja. Definitivno pravi naslov za vsakega, ki išče profesionalen odnos."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stranka 3 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="profile-img-container">
+                        <img src="slike/oseba2.png" alt="Maja L." class="profile-img">
+                    </div>
+                    <h5 class="client-name">Maja L., prenova stanovanja</h5>
+                    <p class="testimonial-text">
+                        "Prenavljala sem staro meščansko stanovanje in najbolj me je skrbelo, kako bodo izvedli prehode med različnimi talnimi oblogami. Ekipa je vinil in ploščice položila vrhunsko. Kar pa me je najbolj sezulo: ko so končali, so za sabo vse pometli in odpeljali odpadni material. Toplo priporočam!"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centriran Globalni Gumb -->
+        <div class="d-flex justify-content-center mt-5">
+            <a href="#" class="btn-novak">Rezerviraj termin</a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="portfolio-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Primeri naših storitev</h2>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Primer 1 -->
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="slike/primer1.jpg" alt="Primer storitve 1" class="img-fluid portfolio-img">
+                </div>
+            </div>
+
+            <!-- Primer 2 -->
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="slike/primer2.jpg" alt="Primer storitve 2" class="img-fluid portfolio-img">
+                </div>
+            </div>
+
+            <!-- Primer 3 -->
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="slike/primer3.jpg" alt="Primer storitve 3" class="img-fluid portfolio-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="footer-placeholder"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+  $("#nav-placeholder").load("navbar.html");
+  $("#footer-placeholder").load("footer.html");
+});
+</script>
