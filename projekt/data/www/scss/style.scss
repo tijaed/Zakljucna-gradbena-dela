@@ -27,7 +27,7 @@
     text-align: center;
 
     .display-title {
-        font-size: 80px; // Točno po tvojem načrtu
+        font-size: 80px; 
         font-weight: 600;
         margin-bottom: 40px;
         color: #000;
@@ -40,23 +40,23 @@
 .navbar-novak {
     background-color: #ffffff;
     padding: 15px 0;
-    min-height: 100px; // Da ima navigacija dovolj višine
+    min-height: 100px; 
     display: flex;
     align-items: center;
 
     .navbar-brand img {
-        height: 70px; // Povečamo logotip, da bo opazen
+        height: 70px; 
         width: auto;
     }
 
     .navbar-nav {
         display: flex;
-        align-items: center; // Vertikalno poravna tekst in gumb
+        align-items: center; 
     }
 
     .nav-link {
         color: #000000 !important;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 18px;
         margin: 0 20px; // Razmik med povezavami
         padding: 0;
@@ -64,6 +64,11 @@
 
         &:hover {
             color: #bfa37e !important;
+        }
+
+         &:active {
+            color: #bfa37e !important; 
+        
         }
     }
 
@@ -84,14 +89,15 @@
             background-color: #333333 !important;
             transform: translateY(-2px);
         }
+       
     }
 }
 
 /* GLOBALNI FOOTER */
 .main-footer {
     background-color: #ffffff;
-    padding: 80px 0 40px 0;
-    border-top: 1px solid #eee;
+    padding: 50px 0 20px 0;
+    border-top: 2px solid #999999;
 
     .footer-logo {
         max-width: 200px;
@@ -101,8 +107,7 @@
     h6 {
         font-size: 16px;
         font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
         color: #000;
     }
 
@@ -121,7 +126,8 @@
             width: 24px;
             height: 24px;
             object-fit: contain;
-            /* Če želiš barvne ikone, izbriši spodnjo vrstico filter */
+            
+
             filter: grayscale(100%); 
             transition: 0.3s;
             &:hover {
@@ -132,7 +138,7 @@
     }
 
     .copyright-text {
-        margin-top: 60px;
+        margin-top: 20px;
         font-size: 13px;
         color: #999;
         text-align: center;
@@ -141,7 +147,7 @@
 
 
 
-// 1. Tvoje spremenljivke
+
 $primary: #A68868; 
 
 // 2. Uvoz Bootstrapa iz node_modules
@@ -153,7 +159,7 @@ $primary: #A68868;
 .hero-section {
     position: relative;
     width: 100%;
-    height: 685px; // Višina iz tvoje Figme
+    height: 685px; 
     overflow: hidden;
 
     .hero-bg-img {
@@ -164,7 +170,7 @@ $primary: #A68868;
         height: 100%;
         object-fit: cover;
         z-index: 1;
-        filter: brightness(0.5); // Zatemnitev, da bela pisava "izskoči"
+        filter: brightness(0.5); 
     }
 
     .hero-overlay-content {
@@ -172,20 +178,20 @@ $primary: #A68868;
         z-index: 2;
         width: 100%;
         max-width: 800px;
-        margin: 0 auto; // Centriranje celotnega bloka
+        margin: 0 auto;
     }
 
     .hero-title {
         font-size: 64px;
         font-weight: 700;
-        color: #ffffff; // Bela barva naslova
+        color: #ffffff;
         margin-bottom: 20px;
         line-height: 1.1;
     }
 
     .hero-text {
         font-size: 18px;
-        color: rgba(255, 255, 255, 0.9); // Bela barva opisa
+        color: rgba(255, 255, 255, 0.9); 
         line-height: 1.6;
         margin-bottom: 40px;
     }
@@ -201,8 +207,8 @@ $primary: #A68868;
         width: 100%;
         max-width: 368px;
         
-        // ODSTRANIMO FIKSNO VIŠINO (height: 703px)
-        // UPORABIMO DINAMIČNO VIŠINO:
+        
+        
         height: 100%; 
         padding: 50px 30px;
         border-radius: 20px;
@@ -238,7 +244,7 @@ $primary: #A68868;
             font-weight: 800;
             color: #000;
             margin-bottom: 20px;
-            min-height: 50px; // Rezervira prostor za dve vrstici imena
+            min-height: 50px; 
             display: flex;
             align-items: center;
         }
@@ -258,7 +264,7 @@ $primary: #A68868;
 
 /* PORTFOLIO SEKCIJA */
 .portfolio-section {
-    background-color: #e0ddd8; // Enaka bež barva kot pri strankah za konsistenco
+    background-color: #e0ddd8; 
     padding: 100px 0;
 
     .section-title {
@@ -271,10 +277,10 @@ $primary: #A68868;
     .portfolio-item {
         width: 100%;
         max-width: 368px;
-        height: 446px; // Točna višina iz Figme
+        height: 446px; 
         margin: 0 auto;
         overflow: hidden;
-        border-radius: 30px; // Bolj poudarjeni zaobljeni robovi kot pri karticah
+        border-radius: 30px; 
         transition: transform 0.3s ease;
 
         &:hover {
@@ -284,7 +290,7 @@ $primary: #A68868;
         .portfolio-img {
             width: 100%;
             height: 100%;
-            object-fit: cover; // Poskrbi, da slika zapolni celoten prostor brez popačenja
+            object-fit: cover; 
         }
     }
 }
@@ -292,22 +298,21 @@ $primary: #A68868;
 //O nas
 
 .about-hero-section {
-    padding: 150px 0; // Veliko prostora zgoraj in spodaj
+    padding: 150px 0; 
     background-color: #ffffff;
-    min-height: 60vh; // Zavzame večino zaslona po višini
+    min-height: 60vh; 
 
     .about-title {
-        font-size: 80px; // Velik, opazen naslov kot v Figmi
+        font-size: 80px; 
         font-weight: 500;
         color: #000000;
         letter-spacing: -2px;
     }
 
-    /* Gumb že uporablja tvoj globalni .btn-black stil, 
-       tukaj samo preveriva, da je centriran */
+  
     .btn-black {
         display: inline-block;
-        // Če želiš, da je gumb tukaj malce večji:
+        
         padding: 15px 40px;
         font-size: 20px;
     }
@@ -325,13 +330,13 @@ $primary: #A68868;
 
 .about-story-section {
     background-color: #d1c1ab;
-    padding: 120px 0; // Nekoliko več paddinga za celotno sekcijo
+    padding: 120px 0; 
 
     .section-title {
         font-size: 48px;
         font-weight: 700;
         color: #000;
-        margin-bottom: 80px; // Povečan razmik med naslovom in vsebino (tekst/slika)
+        margin-bottom: 80px; 
         text-align: center;
     }
 
@@ -341,16 +346,15 @@ $primary: #A68868;
 
     .story-text {
         max-width: 726px;
-        // Odstranimo min-height, če želimo, da se razmik prilagaja naravno, 
-        // ali pa ga pustimo na 470px za fiksni videz.
+        
         min-height: 470px; 
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; // Tekst začne zgoraj, da je poravnan z vrhom slike
+        justify-content: flex-start; 
 
         p {
             font-size: 18px;
-            line-height: 1.8; // Malo večji razmik med vrsticami za boljšo berljivost
+            line-height: 1.8; 
             color: #000;
             margin-bottom: 25px;
         }
@@ -383,8 +387,8 @@ $primary: #A68868;
         width: 220px;  // Velikost kroga
         height: 220px;
         border-radius: 50%; // Naredi krog
-        object-fit: cover;  // Prepreči popačenje slike
-        border: 1px solid #eee; // Nežen rob
+        object-fit: cover;  
+        border: 1px solid #eee; 
     }
 
     h4 {
@@ -407,31 +411,9 @@ body {
   background-color: #ffffff;
   font-family: Arial, sans-serif;
 }
-
-/* NAVBAR */
-.logo {
-  height: 55px;
 }
 
-.nav-link {
-  font-size: 16px;
-  color: #000;
-  position: relative;
-}
-
-.nav-link.active {
-  color: #a8835b;
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #a8835b;
-}
+// Kontakt
 
 /* NASLOV */
 .hero-title {
@@ -517,59 +499,13 @@ body {
 } 
 
 
-/* FOOTER */
-.footer {
-  background: #ffffff; // kot na sliki
-  padding-top: 30px;
-}
 
-.footer-line {
-  border-top: 1px solid #ccc;
-  margin-top: 60px;
-}
 
-/* GRID namesto bootstrap row */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
-  align-items: center;
-  gap: 40px;
-}
 
-/* LOGO */
-.footer-logo {
-  max-width: 180px;
-}
 
-/* NASLOVI */
-.footer-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
 
-/* TEKST */
-.footer-text {
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.4;
-}
 
-/* IKONE */
-.social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
 
-  i {
-    font-size: 18px;
-    color: #333;
-  }
-}
 
-/* COPYRIGHT */
-.footer-bottom {
-  font-size: 13px;
-  padding: 20px 0;
-  color: #666;
-}
+
+
