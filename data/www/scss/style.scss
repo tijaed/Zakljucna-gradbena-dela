@@ -1,0 +1,165 @@
+
+$pisava:            'Montserrat', sans-serif;
+
+$bela:              #ffffff;
+$bela-ozadje:       #ffffff;
+$bez-kartica:       #c9a870;     
+$rjava-cena:        #9b7535;      
+$temna-besedilo:    #1a1a1a;
+$gumb-crni:         #111111;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+body {
+  background-color: $bela-ozadje !important;
+  font-family: $pisava !important;
+}
+
+
+
+//  NASLOV "Naše storitve"
+
+.naslov-storitve {
+  font-family: $pisava !important;  
+  font-size: 2.6rem;                  
+  font-weight: 400;
+  color: $temna-besedilo !important;
+  text-align: center !important;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+
+
+//  SEKCIJA S KARTICAMI
+
+.storitve-ozadje {
+  background-color: $bela-ozadje !important;
+  padding-bottom: 20px;
+}
+
+.razmak-med-vrsticama {
+  height: 60px;
+  background-color: $bela-ozadje;
+}
+
+
+
+.card {
+  border: none !important;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $bez-kartica !important;  
+  height: 100%;
+
+  // Slika na vrhu kartice
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  // Skrit prazen naslov
+  .card-title {
+    display: none;
+  }
+
+  // Telo kartice
+  .card-body {
+    background-color: $bez-kartica !important; 
+    padding: 16px 14px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  // Opis storitve
+  .card-text {
+    font-family: $pisava;
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: $temna-besedilo !important;
+    text-align: center;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+
+.btn.btn-cena {
+  background-color: $rjava-cena !important;    // Temnejša rjava
+  color: $bela !important;
+  font-family: $pisava;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $rjava-cena !important;
+    color: $bela !important;
+    box-shadow: none !important;
+    outline: none;
+  }
+}
+
+
+//  GUMB "Rezerviraj termin" pred footerjem
+
+.btn-novak {
+  display: inline-block;
+  background-color: $gumb-crni !important;
+  color: $bela !important;
+  font-family: $pisava;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 11px 26px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $rjava-cena !important;
+    color: $bela !important;
+  }
+}
+
+.cta-odsek {
+  padding: 50px 0 60px 0;
+  text-align: center;
+  background-color: $bela-ozadje !important;
+}
+
+
+
+//  ODZIVNI DIZAJN – mobilne naprave (pod 768px)
+
+@media (max-width: 768px) {
+
+  .naslov-storitve {
+    font-size: 1.8rem;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .card .card-img-top {
+    height: 170px;
+  }
+
+  .razmak-med-vrsticama {
+    height: 30px;
+  }
+
+  .cta-odsek {
+    padding: 35px 0 45px 0;
+  }
+
+}
