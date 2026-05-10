@@ -1,4 +1,4 @@
-
+       
 services:
   spletni-streznik:
     build:
