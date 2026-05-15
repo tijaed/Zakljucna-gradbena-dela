@@ -1,32 +1,421 @@
+/* GLOBALNI GUMB - NOVAK STANDARD (222x58) */
+.btn-novak {
+    background-color: #000000;
+    color: #ffffff;
+    width: 222px;
+    height: 58px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
+    &:hover {
+        background-color: #222;
+        transform: scale(1.02);
+        color: #fff;
+    }
+}
+
+/* GLOBALNA HERO SEKCIJA */
+.section-hero-global {
+    padding: 150px 0;
+    background-color: #ffffff;
+    text-align: center;
+
+    .display-title {
+        font-size: 80px; 
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: #000;
+    }
+}
+
+
+
+
+/* GLOBALNA NAVIGACIJA  */
+.navbar-novak {
+    background-color: #ffffff;
+    padding: 15px 0;
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+
+    .navbar-brand img {
+        height: 70px; 
+        width: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center; 
+    }
+
+    .nav-link {
+        color: #000000 !important;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 20px; // Razmik med povezavami
+        padding: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #bfa37e !important;
+        }
+
+         &:active {
+            color: #bfa37e !important; 
+        
+        }
+        
+    }
+
+    /* GUMB V NAVIGACIJI */
+    .btn-black {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        padding: 12px 25px !important;
+        border-radius: 10px !important;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 20px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #333333 !important;
+            transform: translateY(-2px);
+        }
+       
+    }
+}
+
+/* GLOBALNI FOOTER */
+.main-footer {
+    background-color: #ffffff;
+    padding: 50px 0 20px 0;
+    border-top: 2px solid #999999;
+
+    .footer-logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: #000;
+    }
+
+    p, a {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.8;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+        
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            
+
+            filter: grayscale(100%); 
+            transition: 0.3s;
+            &:hover {
+                filter: grayscale(0%);
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #999;
+        text-align: center;
+    }
+}
+
+
+
+
+$primary: #A68868; 
+
+// 2. Uvoz Bootstrapa iz node_modules
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+/* HERO SEKCIJA - POPOLNA CENTRIRANOST */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 685px; 
+    overflow: hidden;
+
+    .hero-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(0.5); 
+    }
+
+    .hero-overlay-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 64px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9); 
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+}
+
+/* TESTIMONIALS SEKCIJA - ESTETSKA PRILAGODITEV */
+.testimonials-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+
+    .testimonial-card {
+        background-color: #e0ddd8;
+        width: 100%;
+        max-width: 368px;
+        
+        
+        
+        height: 100%; 
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-align: center;
+        margin: 0 auto;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .profile-img-container {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 25px;
+            flex-shrink: 0;
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .client-name {
+            font-size: 19px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 20px;
+            min-height: 50px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+}
+
+
+
+
+/* PORTFOLIO SEKCIJA */
+.portfolio-section {
+    background-color: #e0ddd8; 
+    padding: 100px 0;
+
+    .section-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 60px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 368px;
+        height: 446px; 
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 30px; 
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02); // Nežen zoom efekt
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+}
+
+//O nas
+
+.about-hero-section {
+    padding: 150px 0; 
+    background-color: #ffffff;
+    min-height: 60vh; 
+
+    .about-title {
+        font-size: 80px; 
+        font-weight: 500;
+        color: #000000;
+        letter-spacing: -2px;
+    }
+
+  
+    .btn-black {
+        display: inline-block;
+        
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+}
+
+// Prilagoditev za mobilne naprave
+@media (max-width: 768px) {
+    .about-hero-section {
+        padding: 100px 0;
+        .about-title {
+            font-size: 50px;
+        }
+    }
+}
+
+.about-story-section {
+    background-color: #d1c1ab;
+    padding: 120px 0; 
+
+    .section-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 80px; 
+        text-align: center;
+    }
+
+    .story-content-row {
+        align-items: center;
+    }
+
+    .story-text {
+        max-width: 726px;
+        
+        min-height: 470px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+
+        p {
+            font-size: 18px;
+            line-height: 1.8; 
+            color: #000;
+            margin-bottom: 25px;
+        }
+    }
+
+    .story-image-wrapper {
+        max-width: 505px;
+        height: 470px;
+        
+        .story-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+}
+
+.team-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+
+    .display-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .team-img {
+        width: 220px;  // Velikost kroga
+        height: 220px;
+        border-radius: 50%; // Naredi krog
+        object-fit: cover;  
+        border: 1px solid #eee; 
+    }
+
+    h4 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    p.text-muted {
+        font-size: 16px;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .lead {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-top: 40px;
+    }
 body {
   background-color: #ffffff;
   font-family: Arial, sans-serif;
 }
-
-/* NAVBAR */
-.logo {
-  height: 55px;
 }
 
-.nav-link {
-  font-size: 16px;
-  color: #000;
-  position: relative;
-}
-
-.nav-link.active {
-  color: #a8835b;
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #a8835b;
-}
+// Kontakt TIJA
 
 /* NASLOV */
 .hero-title {
@@ -111,60 +500,161 @@ body {
   overflow: hidden;
 } 
 
+// TIM
 
-/* FOOTER */
-.footer {
-  background: #ffffff; // kot na sliki
-  padding-top: 30px;
+
+$pisava:            'Montserrat', sans-serif;
+
+$bela:              #ffffff;
+$bela-ozadje:       #ffffff;
+$bez-kartica:       #c9a870;     
+$rjava-cena:        #9b7535;      
+$temna-besedilo:    #1a1a1a;
+$gumb-crni:         #111111;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+body {
+  background-color: $bela-ozadje !important;
+  font-family: $pisava !important;
 }
 
-.footer-line {
-  border-top: 1px solid #ccc;
+
+
+//  NASLOV "Naše storitve"
+
+.naslov-storitve {
+  font-family: $pisava !important;  
+  font-size: 2.6rem;                  
+  font-weight: 400;
+  color: $temna-besedilo !important;
+  text-align: center !important;
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 
-/* GRID namesto bootstrap row */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
-  align-items: center;
-  gap: 40px;
+
+
+//  SEKCIJA S KARTICAMI
+
+.storitve-ozadje {
+  background-color: $bela-ozadje !important;
+  padding-bottom: 20px;
 }
 
-/* LOGO */
-.footer-logo {
-  max-width: 180px;
+.razmak-med-vrsticama {
+  height: 60px;
+  background-color: $bela-ozadje;
 }
 
-/* NASLOVI */
-.footer-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
 
-/* TEKST */
-.footer-text {
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.4;
-}
 
-/* IKONE */
-.social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
+.card {
+  border: none !important;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $bez-kartica !important;  
+  height: 100%;
 
-  i {
-    font-size: 18px;
-    color: #333;
+  // Slika na vrhu kartice
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  // Skrit prazen naslov
+  .card-title {
+    display: none;
+  }
+
+  // Telo kartice
+  .card-body {
+    background-color: $bez-kartica !important; 
+    padding: 16px 14px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  // Opis storitve
+  .card-text {
+    font-family: $pisava;
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: $temna-besedilo !important;
+    text-align: center;
+    line-height: 1.55;
+    margin: 0;
   }
 }
 
-/* COPYRIGHT */
-.footer-bottom {
-  font-size: 13px;
-  padding: 20px 0;
-  color: #666;
+
+.btn.btn-cena {
+  background-color: $rjava-cena !important;    // Temnejša rjava
+  color: $bela !important;
+  font-family: $pisava;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $rjava-cena !important;
+    color: $bela !important;
+    box-shadow: none !important;
+    outline: none;
+  }
 }
+
+
+
+
+.cta-odsek {
+  padding: 50px 0 60px 0;
+  text-align: center;
+  background-color: $bela-ozadje !important;
+}
+
+
+
+//  ODZIVNI DIZAJN – mobilne naprave (pod 768px)
+
+@media (max-width: 768px) {
+
+  .naslov-storitve {
+    font-size: 1.8rem;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .card .card-img-top {
+    height: 170px;
+  }
+
+  .razmak-med-vrsticama {
+    height: 30px;
+  }
+
+  .cta-odsek {
+    padding: 35px 0 45px 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
