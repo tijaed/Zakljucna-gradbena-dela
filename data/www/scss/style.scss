@@ -1,3 +1,155 @@
+/* GLOBALNI GUMB - NOVAK STANDARD (222x58) */
+.btn-novak {
+    background-color: #000000;
+    color: #ffffff;
+    width: 222px;
+    height: 58px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
+    &:hover {
+        background-color: #222;
+        transform: scale(1.02);
+        color: #fff;
+    }
+}
+
+/* GLOBALNA HERO SEKCIJA */
+.section-hero-global {
+    padding: 150px 0;
+    background-color: #ffffff;
+    text-align: center;
+
+    .display-title {
+        font-size: 80px; 
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: #000;
+    }
+}
+
+
+/* GLOBALNA NAVIGACIJA  */
+.navbar-novak {
+    background-color: #ffffff;
+    padding: 15px 0;
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+
+    .navbar-brand img {
+        height: 70px; 
+        width: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center; 
+    }
+
+    .nav-link {
+        color: #000000 !important;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 20px; // Razmik med povezavami
+        padding: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #bfa37e !important;
+        }
+
+         &:active {
+            color: #bfa37e !important; 
+        
+        }
+        
+    }
+
+    /* GUMB V NAVIGACIJI */
+    .btn-black {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        padding: 12px 25px !important;
+        border-radius: 10px !important;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 20px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #333333 !important;
+            transform: translateY(-2px);
+        }
+       
+    }
+}
+
+/* GLOBALNI FOOTER */
+.main-footer {
+    background-color: #ffffff;
+    padding: 50px 0 20px 0;
+    border-top: 2px solid #999999;
+
+    .footer-logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: #000;
+    }
+
+    p, a {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.8;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+        
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            
+
+            filter: grayscale(100%); 
+            transition: 0.3s;
+            &:hover {
+                filter: grayscale(0%);
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #999;
+        text-align: center;
+    }
+}
+
+
+
+
+$primary: #A68868; 
+
 
 $pisava:            'Montserrat', sans-serif;
 
@@ -54,6 +206,8 @@ body {
   overflow: hidden;
   background-color: $bez-kartica !important;  
   height: 100%;
+  display: flex; 
+  flex-direction: column;
 
   // Slika na vrhu kartice
   .card-img-top {
@@ -74,7 +228,9 @@ body {
     padding: 16px 14px 18px 14px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: space-between; 
+    flex-grow: 1; 
+    gap: 12px; 
   }
 
   // Opis storitve
@@ -86,11 +242,15 @@ body {
     text-align: center;
     line-height: 1.55;
     margin: 0;
+    min-height: 70px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
   }
 }
 
 
-.btn.btn-cena {
+.btn-cena { 
   background-color: $rjava-cena !important;    // Temnejša rjava
   color: $bela !important;
   font-family: $pisava;
@@ -99,6 +259,8 @@ body {
   padding: 8px 18px;
   border-radius: 6px;
   border: none !important;
+  width: fit-content; 
+  display: inline-block;
 
   &:hover,
   &:focus,
