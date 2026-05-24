@@ -1,4 +1,4 @@
-
+<?php include 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="sl">
 <head>
@@ -12,8 +12,7 @@
 
 
     <!-- Navigacija (se naloži avtomatsko) -->
-<div id="nav-placeholder"></div>
-
+<?php include 'navbar.php'; ?>
 
 
 
@@ -114,7 +113,7 @@
 
 
 <!-- Footer (se naloži avtomatsko) -->
-<div id="footer-placeholder"></div>
+<?php include 'footer.php'; ?>
 
 
 

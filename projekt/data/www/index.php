@@ -1,4 +1,4 @@
-
+<?php include 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="sl">
 <head>
@@ -7,7 +7,8 @@
     <title>Moja Prva Spletna Stran</title>
     <link rel="stylesheet" href="css/style.css">
 
-  <div id="nav-placeholder"> </div>
+<?php include 'navbar.php'; ?>
+
 
 
   <section class="hero-section">
@@ -112,7 +113,7 @@
 </section>
 
 
-<div id="footer-placeholder"></div>
+<?php include 'footer.php'; ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
