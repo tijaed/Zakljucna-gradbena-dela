@@ -13,7 +13,7 @@
 <body>
   
   <!-- NAVIGACIJA -->
-  <?php require_once 'nav.php'; ?>
+  <?php require_once 'navbar.php'; ?>
  
  
   <!-- STORITVE -->
@@ -28,7 +28,7 @@
         <!-- Gumb kaže na modal z id="modal-pleskanje" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="Pleskanje in fasaderstvo.jpg" class="card-img-top" alt="Slika pleskanja in fasaderstva">
+            <img src="slike/Pleskanje in fasaderstvo.jpg" class="card-img-top" alt="Slika pleskanja in fasaderstva">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Kakovostna zaščita in estetska obdelava zunanjih in notranjih površin</p><br>
@@ -43,7 +43,7 @@
         <!-- Gumb kaže na modal z id="modal-talne" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="pOLAGANJE TALNIH OBLOG.jpg" class="card-img-top" alt="Slika polaganje talnih oblog">
+            <img src="slike/pOLAGANJE TALNIH OBLOG.jpg" class="card-img-top" alt="Slika polaganje talnih oblog">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Vgradnja parketa, laminata, vinila in drugih talnih rešitev</p><br><br>
@@ -58,7 +58,7 @@
         <!-- Gumb kaže na modal z id="modal-keramika" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="Polaganje keramike.jpg" class="card-img-top" alt="Slika polaganje keramike">
+            <img src="slike/Polaganje keramike.jpg" class="card-img-top" alt="Slika polaganje keramike">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Polaganje ploščic za kopalnice, kuhinje in druge prostore</p><br><br>
@@ -83,7 +83,7 @@
         <!-- Gumb kaže na modal z id="modal-suho" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="Suhomontaža.jpg" class="card-img-top" alt="Slika Suhomontaža">
+            <img src="slike/Suhomontaža.jpg" class="card-img-top" alt="Slika Suhomontaža">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Izdelava predelnih sten, spuščenih stropov in drugih knauf rešitev</p><br><br>
@@ -98,7 +98,7 @@
         <!-- Gumb kaže na modal z id="modal-instalacije" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="Inštalacije.jpg" class="card-img-top" alt="Slika Inštalacije">
+            <img src="slike/Inštalacije.jpg" class="card-img-top" alt="Slika Inštalacije">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Izvedba elektro in vodovodnih napeljav ter montaža opreme</p><br><br><br>
@@ -113,7 +113,7 @@
         <!-- Gumb kaže na modal z id="modal-okolica" -->
         <div class="col-md-4">
           <div class="card">
-            <img src="Urejanje okolice.jpg" class="card-img-top" alt="Slika Urejanje okolice">
+            <img src="slike/Urejanje okolice.jpg" class="card-img-top" alt="Slika Urejanje okolice">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Celovita ureditev dvorišč, tlakovcev, teras, ograj in zunanjih površin</p><br><br>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-novak sticky-top">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="slike/Novak_logo.png" alt="Novak Logo">
         </a>
 
@@ -13,14 +13,14 @@
         <!-- Meni in Gumb -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
-                <li class="nav-item"><a class="nav-link" href="onas.html">O nas</a></li>
-                <li class="nav-item"><a class="nav-link" href="storitve.html">Storitve</a></li>
-                <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php">Domov</a></li>
+                <li class="nav-item"><a class="nav-link" href="onas.php">O nas</a></li>
+                <li class="nav-item"><a class="nav-link" href="storitve.php">Storitve</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
                 
                 <!-- Uporaba tvojega GLOBALNEGA gumba -->
                 <li class="nav-item ms-lg-4">
-                    <a class="btn btn-black" href="kontakt.html">Rezerviraj termin</a>
+                    <a class="btn btn-black" href="kontakt.php">Rezerviraj termin</a>
                 </li>
             </ul>
         </div>
