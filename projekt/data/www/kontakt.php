@@ -1,4 +1,46 @@
-<?php include 'db.php'; ?>
+<?php include 'db.php'; 
+
+// DEL ZA SHRANJEVANJE PODATKOV (POST & INSERT) 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+    $ime = $_POST['ime'];
+    $priimek = $_POST['priimek'];
+    $email = $_POST['email'];
+    $storitev = $_POST['storitev'];
+    // Za polja ki niso obvezna preverimo če obstajajo 
+    $velikost = isset($_POST['velikost']) ? $_POST['velikost'] : '';
+    $sporocilo = isset($_POST['sporocilo']) ? $_POST['sporocilo'] : '';
+
+    try {
+        
+        $sql = "INSERT INTO kontaktni_obrazec (ime, priimek, email, storitev, velikost, sporocilo) 
+                VALUES (:ime, :priimek, :email, :storitev, :velikost, :sporocilo)";
+        
+        $stmt = $conn->prepare($sql);
+        
+        
+        $stmt->bindParam(':ime', $ime);
+        $stmt->bindParam(':priimek', $priimek);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':storitev', $storitev);
+        $stmt->bindParam(':velikost', $velikost);
+        $stmt->bindParam(':sporocilo', $sporocilo);
+        
+        
+        $stmt->execute();
+
+        
+        echo "<p style='color:green; font-weight:bold; text-align:center; background-color:#d4edda; padding:15px; margin:0;'>
+                Hvala! Vaše sporočilo za Novak Zaključna dela je bilo uspešno shranjeno v bazo.
+              </p>";
+              
+    } catch(PDOException $e) {
+        echo "<p style='color:red; font-weight:bold; text-align:center; background-color:#f8d7da; padding:15px; margin:0;'>
+                Napaka pri shranjevanju v bazo: " . $e->getMessage() . "
+              </p>";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="sl">
